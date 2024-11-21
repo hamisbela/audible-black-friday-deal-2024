@@ -1,0 +1,153 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+
+const features = [
+  {
+    title: "1 Audiobook Credit Monthly",
+    value: "INCLUDED",
+    description: "Choose any premium audiobook each month, yours to keep forever"
+  },
+  {
+    title: "Bonus $20 Credit",
+    value: "FREE",
+    description: "Get an extra $20 Audible credit to spend on any titles"
+  },
+  {
+    title: "Unlimited Listening",
+    value: "INCLUDED",
+    description: "Access thousands of included audiobooks and Audible Originals"
+  }
+];
+
+const benefits = [
+  {
+    title: "Premium Benefits",
+    features: [
+      "1 audiobook credit every month",
+      "Thousands of included titles",
+      "Exclusive member discounts",
+      "Access to Audible Originals"
+    ]
+  },
+  {
+    title: "Special Features",
+    features: [
+      "Bonus $20 Audible credit",
+      "Cancel anytime flexibility",
+      "Keep your audiobooks forever",
+      "Premium audio quality"
+    ]
+  }
+];
+---
+
+<Layout 
+  title="Audible Black Friday Deal 2024 - Only $0.99/mo for 3 Months + $20 Credit [Limited Time]" 
+  description="🎧 Exclusive Audible Black Friday Deal 2024: Get 3 months at $0.99/mo (90% OFF) plus $20 bonus credit. Access thousands of audiobooks. Offer ends December 2, 2024!">
+  
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <!-- Hero Section -->
+    <section class="text-center mb-16">
+      <div class="mb-4 text-green-600 font-semibold flex items-center justify-center gap-2">
+        <span class="inline-block w-2 h-2 bg-green-600 rounded-full"></span>
+        Limited Time Black Friday Offer • Ends December 2, 2024
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        Audible Black Friday Deal 2024
+        <span class="block text-gray-600 text-2xl mt-2">Only $0.99/mo for 3 Months + $20 Credit</span>
+      </h1>
+      <p class="text-xl text-gray-600 mb-8">
+        Save Over 90% on Your First 3 Months • Black Friday Special
+      </p>
+      <a href="https://amzn.to/3CBCBB0" 
+         class="inline-block bg-orange-500 text-white text-xl font-bold py-4 px-8 rounded-lg hover:bg-orange-600 transition-colors">
+        Claim Your Audible Black Friday Deal
+      </a>
+      <p class="text-sm text-gray-500 mt-2">Limited time offer • Cancel anytime</p>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="grid md:grid-cols-3 gap-8 mb-16">
+      {features.map(feature => <FeatureCard {...feature} />)}
+    </section>
+
+    <!-- Pricing Table -->
+    <section class="bg-white rounded-lg p-8 mb-16 shadow-sm">
+      <h2 class="text-2xl font-bold mb-6">Audible Black Friday Offer Breakdown</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full">
+          <thead>
+            <tr class="border-b">
+              <th class="text-left p-4">Period</th>
+              <th class="text-left p-4">Regular Price</th>
+              <th class="text-left p-4">Deal Price</th>
+              <th class="text-left p-4">You Save</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="p-4"><strong>First 3 Months</strong></td>
+              <td class="p-4">$14.95/mo</td>
+              <td class="p-4">$0.99/mo</td>
+              <td class="p-4">$41.88</td>
+            </tr>
+            <tr>
+              <td class="p-4"><strong>Bonus Credit</strong></td>
+              <td class="p-4">$20.00</td>
+              <td class="p-4">FREE</td>
+              <td class="p-4">$20.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-gray-500 mt-4">*Auto-renews at $14.95/mo after promotional period</p>
+    </section>
+
+    <!-- Features -->
+    <section class="space-y-8 mb-16">
+      {benefits.map(section => (
+        <div class="bg-white rounded-lg p-8 shadow-sm">
+          <h3 class="text-2xl font-bold mb-4">{section.title}</h3>
+          <ul class="space-y-3">
+            {section.features.map(feature => (
+              <li class="flex items-start gap-3">
+                <span class="text-orange-500">✓</span>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-white rounded-lg p-8 mb-16 shadow-sm">
+      <h2 class="text-2xl font-bold mb-6">Audible Black Friday Deal FAQ</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-bold mb-2">What's included in the Audible Black Friday deal?</h3>
+          <p class="text-gray-600">This Black Friday offer includes 3 months of Audible membership for just $0.99/month (over 90% off) plus a bonus $20 Audible credit. You'll get 1 audiobook credit monthly, access to thousands of included titles, and exclusive member discounts.</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-2">When does this offer expire?</h3>
+          <p class="text-gray-600">This limited-time Black Friday deal ends on December 2, 2024. Make sure to claim your discount before it expires!</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-2">Can I cancel my subscription?</h3>
+          <p class="text-gray-600">Yes, you can cancel your Audible membership anytime. You'll keep all your audiobooks even after cancellation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Bottom -->
+    <section class="text-center">
+      <h2 class="text-2xl font-bold mb-4">Don't Miss This Incredible Audible Deal!</h2>
+      <a href="https://amzn.to/3CBCBB0" 
+         class="inline-block bg-orange-500 text-white text-xl font-bold py-4 px-8 rounded-lg hover:bg-orange-600 transition-colors">
+        Get 3 Months at $0.99/mo + $20 Credit
+      </a>
+      <p class="text-sm text-gray-500 mt-2">Offer ends December 2, 2024 • Cancel anytime</p>
+    </section>
+  </main>
+</Layout>
